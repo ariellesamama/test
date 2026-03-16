@@ -282,7 +282,7 @@ def plot_allocation_donut(portfolio_dict):
     if not values:
         return
 
-    fig, ax = plt.subplots(figsize=(2.8, 2.8))
+    fig, ax = plt.subplots(figsize=(4, 4))
 
     ax.pie(
         values,
@@ -291,10 +291,10 @@ def plot_allocation_donut(portfolio_dict):
         startangle=90,
         counterclock=False,
         autopct=lambda pct: f"{pct:.1f}%" if pct > 6 else "",
-        pctdistance=0.72,
-        labeldistance=1.08,
-        wedgeprops={"width": 0.34, "edgecolor": "white", "linewidth": 1.5},
-        textprops={"fontsize": 8, "color": "#3a3a3a"},
+        pctdistance=0.7,
+        labeldistance=1,
+        wedgeprops={"width": 0.1, "edgecolor": "white", "linewidth": 1.5},
+        textprops={"fontsize": 7, "color": "#3a3a3a"},
     )
 
     ax.set_title("Allocation", fontsize=11, pad=8, color="#2f2f2f")
