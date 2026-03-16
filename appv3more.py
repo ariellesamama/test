@@ -288,16 +288,15 @@ def plot_allocation_donut(portfolio_dict):
         values,
         labels=labels,
         colors=colors,
-        startangle=90,
+        startangle=180,
         counterclock=False,
-        autopct=lambda pct: f"{pct:.1f}%" if pct > 6 else "",
+        autopct="%1.1f%%",
         pctdistance=0.7,
         labeldistance=1,
-        wedgeprops={"width": 0.1, "edgecolor": "white", "linewidth": 1.5},
-        textprops={"fontsize": 7, "color": "#3a3a3a"},
+        wedgeprops={"width": 3, "edgecolor": "white", "linewidth": 1.5},
+        textprops={"fontsize": 6, "color": "#3a3a3a"},
     )
 
-    ax.set_title("Allocation", fontsize=11, pad=8, color="#2f2f2f")
     ax.axis("equal")
     plt.tight_layout()
     st.pyplot(fig, clear_figure=True)
