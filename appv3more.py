@@ -1,32 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 16 16:17:15 2026
-
-@author: samama
-"""
-
 import streamlit as st
 import pandas as pd
 import random
 import matplotlib.pyplot as plt
 
-# -----------------------------
-# PAGE CONFIG
-# -----------------------------
 st.set_page_config(page_title="Financial Shock Survival Game")
-
-# -----------------------------
-# CONSTANTS
-# -----------------------------
 STARTING_CAPITAL = 10000
 
-ASSETS = [
-    "Stocks",
-    "Currency Market",
-    "Fixed Income",
-    "Private Assets",
-    "Crypto",
-]
+ASSETS = ["Stocks","Currency Market","Fixed Income","Private Assets","Crypto"]
 
 ASSET_DEFINITIONS = {
     "Stocks": "Ownership shares in companies. They can offer higher returns but are more volatile.",
@@ -126,36 +106,7 @@ NEUTRAL_COLOR = "#8E8E8E"
 # -----------------------------
 # CSS
 # -----------------------------
-st.markdown(
-    """
-    <style>
-    .block-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
 
-    div[data-testid="stMetric"] {
-        background-color: #faf8f6;
-        border: 1px solid #eee7e1;
-        padding: 12px 16px;
-        border-radius: 14px;
-    }
-
-    div[data-testid="stInfo"] {
-        border-radius: 14px;
-    }
-
-    div[data-testid="stSuccess"] {
-        border-radius: 14px;
-    }
-
-    div[data-testid="stError"] {
-        border-radius: 14px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
 # -----------------------------
 # SESSION STATE
@@ -394,7 +345,7 @@ if st.session_state.phase == "setup":
 
     with st.expander("Asset Class Definitions"):
         for a in ASSETS:
-            st.write(f"**{a}** — {ASSET_DEFINITIONS[a]}")
+            st.write(f"**{a}** : {ASSET_DEFINITIONS[a]}")
 
     cols = st.columns(len(ASSETS))
     for i, asset in enumerate(ASSETS):
