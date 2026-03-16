@@ -293,7 +293,7 @@ def plot_allocation_donut(portfolio_dict):
         autopct="%1.1f%%",
         pctdistance=0.7,
         labeldistance=1,
-        wedgeprops={"width": 3, "edgecolor": "white", "linewidth": 1.5},
+        wedgeprops={"width": 0.4, "edgecolor": "white", "linewidth": 1.5},
         textprops={"fontsize": 6, "color": "#3a3a3a"},
     )
 
