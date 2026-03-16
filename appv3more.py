@@ -282,7 +282,7 @@ def plot_allocation_donut(portfolio_dict):
     if not values:
         return
 
-    fig, ax = plt.subplots(figsize=(4.5, 3.8))
+    fig, ax = plt.subplots(figsize=(4.5, 3))
 
     ax.pie(
         values,
