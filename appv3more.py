@@ -282,7 +282,7 @@ def plot_allocation_donut(portfolio_dict):
     if not values:
         return
 
-    fig, ax = plt.subplots(figsize=(4.5, 3.5))
+    fig, ax = plt.subplots(figsize=(4.5, 3.2))
 
     ax.pie(
         values,
@@ -291,7 +291,7 @@ def plot_allocation_donut(portfolio_dict):
         startangle=180,
         counterclock=False,
         autopct="%1.1f%%",
-        pctdistance=0.7,
+        pctdistance=1,
         labeldistance=1,
         wedgeprops={"width": 0.5, "edgecolor": "white", "linewidth": 1.5},
         textprops={"fontsize": 10, "color": "#3a3a3a"},
