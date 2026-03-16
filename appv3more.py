@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 # -----------------------------
 # PAGE CONFIG
 # -----------------------------
-st.set_page_config(page_title="Financial Shock Survival Game", layout="wide")
+st.set_page_config(page_title="Financial Shock Survival Game")
 
 # -----------------------------
 # CONSTANTS
@@ -456,7 +456,7 @@ elif st.session_state.phase == "shock":
     progress_value = (st.session_state.round_index + 1) / len(st.session_state.events)
     st.progress(progress_value)
 
-    table_col, pie_col = st.columns([2.2, 0.9], gap="large")
+    table_col, pie_col = st.columns([2, 2], gap="large")
 
     with table_col:
         st.subheader("Before / after shock")
