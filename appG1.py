@@ -45,7 +45,7 @@ ROUNDS = [
     {"name": "Commodity Boom",
      "description": "Energy and commodity prices surge due to global supply shortages.",
      "impacts": {"Stocks": 0.04,"Currency Market": 0.01,"Fixed Income": -0.03,"Private Assets": 0.08,"Crypto": 0.02},
-     "insight": "Commodity booms can benefit real assets and companies linked to natural resources.}
+     "insight": "Commodity booms can benefit real assets and companies linked to natural resources."}
      ]
 
 ASSET_COLORS = {"Stocks": "#8FB7D8","Currency Market": "#E7A6C6","Fixed Income": "#F2D27A","Private Assets": "#C6B4E3","Crypto": "#A8D8D1"}
